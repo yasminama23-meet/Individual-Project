@@ -8,6 +8,25 @@ app.config['SECRET_KEY'] = 'super-secret-key'
 #Code goes below here
 
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+
+
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
+
+
+@app.route('/cart')
+def cart():
+    return render_template('cart.html')
 
 
 #Code goes above here
