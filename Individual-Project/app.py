@@ -38,25 +38,35 @@ def login():
         password = request.form['password']
         try:
             login_session['user'] = auth.sign_in_with_email_and_password(email, password)
-            return redirect(url_for('home'))
+            return redirect(url_for('index'))
         except:
             error = "Authentication failed"
+            return error
+    else: 
+        return render_template('login.html')
 
-    return render_template('login.html')
 
-
-@app.route('/loginnsignup', methods=['POST'])
+@app.route('/loginnsignup', methods=['GET','POST'])
 def signup():
-     error = ""
-     if request.method == 'POST':
+    error = ""
+    if request.method == 'POST':
         email = request.form['email']
-        password = request.form['password']
+        password = request.form['psw']
+        username = request.form['username']
         try:
             login_session['user'] = auth.create_user_with_email_and_password(email, password)
-            return redirect(url_for('home'))
+
+            user = {"usename": username, "email": email, "password": password}
+            db.child("Users").child(login_session['user']['localId']).set(user)
+
+
+
+            
+            return redirect(url_for('index'))
         except:
             error = "Authentication failed"
-            return render_template('login.html')
+            return error
+    return render_template('loginnsignup.html')
 
 
 
@@ -70,6 +80,12 @@ def shop():
 @app.route('/cart')
 def cart():
     return render_template('cart.html')
+
+
+
+@app.route('/checkout')
+def checkout():
+    return render_template('checkout.html')
 
 
 #Code goes above here

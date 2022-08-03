@@ -54,30 +54,16 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 
-button {
-  background-color: #356a79;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
 </style>
 </head>
 <body>
 
 <ul>
-  <li><a href="">Home</a></li>
-  <li><a href="/login">login/signup</a></li>
+  <li><a href="/loginnsignup">signup</a></li>
+  <li><a href="/login">login</a></li>
   <li><a href="/shop">shop now</a></li>
   <li><a href="/cart">my cart</a></li>
+  <li><a href="/checkout">checkout</a></li>
 </ul>
 
 <section>
@@ -88,10 +74,8 @@ button:hover {
   <img class="mySlides" src="/static/c3.jpeg"
   style="width:100%">
 </section>
-  
-<button onclick="/login">login</button>
 
-<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+
 
 <script>
 var myIndex = 0;
