@@ -36,6 +36,39 @@ li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
+
+
+* {box-sizing: border-box}
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+button {
+  background-color: #356a79;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
 </style>
 </head>
 <body>
@@ -55,6 +88,10 @@ li a:hover:not(.active) {
   <img class="mySlides" src="/static/c3.jpeg"
   style="width:100%">
 </section>
+  
+<button onclick="/login">login</button>
+
+<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
 
 <script>
 var myIndex = 0;

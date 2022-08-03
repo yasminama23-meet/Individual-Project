@@ -3,37 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <style>* {box-sizing: border-box}
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-
-button {
-  background-color: #356a79;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
+    <style>
 .container {
   padding: 16px;
 }
@@ -62,14 +32,12 @@ hr {
 }</style>
 </head>
 <body>
-    
-<button onclick="document.getElementById('th').style.display='block'">login</button>
 
-<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+
+
 
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" 
-  <form class="modal-content" action="/action_page.php">
+  <form class="modal-content" action="/login", method="POST">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -85,31 +53,13 @@ hr {
 
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-      
+      <input>
+          <button type="submit">sign up</button>
     
       </div>
     </div>
   </form>
 </div>
-    
-<div id="th" class="modal">
-  <span onclick="document.getElementById('th').style.display='none'" 
-  <form class="modal-content" action="/action_page.php">
-    <div class="container">
-      <h1>login</h1>
-      <p>Please fill in this form to enter your account.</p>
-      <hr>
-      
-      <label for="psw"><b>username</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <label for="psw-repeat"><b>Password</b></label>
-      <input type="password" placeholder="Password" name="psw-repeat" required>
-      </div>
-    </div>
-  </form>
-</div>
-
-    <script src="script.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
