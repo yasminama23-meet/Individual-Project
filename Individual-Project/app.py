@@ -90,6 +90,11 @@ def checkout():
     return render_template('checkout.html')
 
 
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 #Code goes above here
 
 if __name__ == '__main__':
