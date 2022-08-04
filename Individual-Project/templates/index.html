@@ -54,6 +54,23 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 
+.container {
+  /*position: relative;*/
+}
+
+
+.text-block {
+  position: absolute;
+  bottom: 500px;
+  right: 400px;
+  block-size: 200px;
+  background-color: black;
+  color: white;
+  font-size: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
 </style>
 </head>
 <body>
@@ -66,6 +83,9 @@ input[type=text]:focus, input[type=password]:focus {
   <li><a href="/checkout">checkout</a></li>
 </ul>
 
+
+
+
 <section>
   <img class="mySlides" src="/static/c4.jpg"
   style="width:100%">
@@ -73,6 +93,11 @@ input[type=text]:focus, input[type=password]:focus {
   style="width:100%">
   <img class="mySlides" src="/static/c3.jpeg"
   style="width:100%">
+  <div class="container">
+  <div class="text-block">
+    <h4>welcome to bean's candy shop</h4>
+  </div>
+</div>
 </section>
 
 
@@ -85,6 +110,8 @@ function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
+ 
+
     x[i].style.display = "none";
   }
   myIndex++;

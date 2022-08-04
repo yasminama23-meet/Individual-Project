@@ -72,9 +72,11 @@ def signup():
 
 
 
-@app.route('/shop')
+@app.route('/shop', methods=['GET','POST'])
 def shop():
+    error = ""
     return render_template('shop.html')
+
 
 
 @app.route('/cart')
